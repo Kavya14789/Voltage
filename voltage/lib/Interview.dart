@@ -49,6 +49,7 @@ class _InterviewState extends State<Interview> {
                         Icons.arrow_back_ios,
                         color: Colors.white,
                         size: 22,
+
                       ),
                       onPressed: () {
                         Navigator.of(context).pushReplacement(MaterialPageRoute(
