@@ -32,7 +32,7 @@ class _ShortlistedCandidatesState extends State<ShortlistedCandidates> {
         child: Scaffold(
             backgroundColor: Colors.transparent,
             body: SingleChildScrollView(
-                scrollDirection: Axis.vertical,
+                physics: NeverScrollableScrollPhysics(),
                 child: Column(children: [
                   Container(
                     width: MediaQuery
@@ -90,13 +90,14 @@ class _ShortlistedCandidatesState extends State<ShortlistedCandidates> {
                     ],
 
                   ),
-
-                  Container(
+            SingleChildScrollView(
+                scrollDirection: Axis.vertical,
+                 child:  Container(
                     width: MediaQuery
                         .of(context)
                         .size
                         .width,
-                    height: 670,
+                    height: MediaQuery.of(context).size.height,
                     alignment: Alignment.center,
                     decoration: BoxDecoration(
                         color: Colors.white,
@@ -160,7 +161,7 @@ class _ShortlistedCandidatesState extends State<ShortlistedCandidates> {
                                     width: 50,
                                     decoration: BoxDecoration(
                                       color: Colors.white,
-                                      borderRadius: BorderRadius.all(Radius.circular(25))
+                                      borderRadius: BorderRadius.all(Radius.circular(25)),
                                     ),
                                     child: Icon(Icons.model_training,
                                     color: Colors.teal,
@@ -250,6 +251,7 @@ class _ShortlistedCandidatesState extends State<ShortlistedCandidates> {
                       ],
                     ),
                   )
+            )
                 ]
                 )
             )

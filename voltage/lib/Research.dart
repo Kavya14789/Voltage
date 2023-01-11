@@ -28,7 +28,7 @@ class _ResearchState extends State<Research> {
         child: Scaffold(
             backgroundColor: Colors.transparent,
             body: SingleChildScrollView(
-              scrollDirection: Axis.vertical,
+              physics: NeverScrollableScrollPhysics(),
               child: Column(children: [
                 Container(
                   width: MediaQuery.of(context).size.width,
@@ -80,7 +80,7 @@ class _ResearchState extends State<Research> {
                 ),
                 Container(
                   width: MediaQuery.of(context).size.width,
-                  height: 670,
+                  height: MediaQuery.of(context).size.height,
                   alignment: Alignment.center,
                   decoration: BoxDecoration(
                       color: Colors.white,

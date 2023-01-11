@@ -103,7 +103,7 @@ class _MyProfileState extends State<MyProfile> {
             children: [
               Container(
                   width: MediaQuery.of(context).size.width,
-                  height: 670,
+                  height: MediaQuery.of(context).size.height,
                   decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.only(

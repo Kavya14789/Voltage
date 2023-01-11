@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:voltage/FourthQuestion.dart';
 import 'package:voltage/TrailQuestion.dart';
-import 'package:voltage/main.dart';
+import 'package:voltage/Trail.dart';
 
 void main() => runApp(MaterialApp(
       home: ThirdQuestion(),
@@ -29,15 +29,6 @@ class _ThirdQuestionState extends State<ThirdQuestion> {
                 child: Container(
                   width: MediaQuery.of(context).size.width,
                   height: 30,
-                  child: Text(
-                    '',
-                    style: TextStyle(
-                      fontSize: 23,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
-                    ),
-                  ),
-                  alignment: Alignment.bottomCenter,
                 ),
               ),
               Container(
@@ -120,7 +111,6 @@ class _ThirdQuestionState extends State<ThirdQuestion> {
                                   onPressed: () {},
                                   style: ElevatedButton.styleFrom(
                                       primary: Colors.white,
-                                      onPrimary: Colors.orangeAccent,
                                       textStyle: TextStyle(fontSize: 14),
                                       side: BorderSide(
                                           color: Colors.tealAccent, width: 2),

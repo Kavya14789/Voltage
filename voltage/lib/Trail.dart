@@ -3,17 +3,17 @@ import 'package:voltage/MyProfile.dart';
 import 'package:voltage/TrailQuiz.dart';
 
 void main() => runApp(MaterialApp(
-      home: MyApp(),
+      home: Trail(),
     ));
 
-class MyApp extends StatefulWidget {
-  const MyApp({Key? key}) : super(key: key);
+class Trail extends StatefulWidget {
+  const Trail({Key? key}) : super(key: key);
 
   @override
-  State<MyApp> createState() => _MyApp();
+  State<Trail> createState() => _Trail();
 }
 
-class _MyApp extends State<MyApp> {
+class _Trail extends State<Trail> {
   @override
   Widget build(BuildContext context) {
     return Container(

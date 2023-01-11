@@ -5,7 +5,6 @@ import 'package:voltage/Project.dart';
 import 'package:voltage/Research.dart';
 import 'package:voltage/ShortlistedCandidates.dart';
 import 'package:voltage/SubmitTrails.dart';
-import 'package:voltage/ThankYou.dart';
 import 'package:voltage/Training.dart';
 
 void main() => runApp(MaterialApp(
@@ -34,7 +33,7 @@ class _FranchiseState extends State<Franchise> {
         child: Scaffold(
             backgroundColor: Colors.transparent,
             body: SingleChildScrollView(
-                scrollDirection: Axis.vertical,
+                physics: NeverScrollableScrollPhysics(),
                 child: Column(children: [
                   Container(
                     width: MediaQuery.of(context).size.width,
@@ -101,7 +100,7 @@ class _FranchiseState extends State<Franchise> {
                   Center(
                       child: Container(
                     width: MediaQuery.of(context).size.width,
-                    height: 670,
+                        height: MediaQuery.of(context).size.height,
                     decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.only(
@@ -109,7 +108,8 @@ class _FranchiseState extends State<Franchise> {
                           topLeft: Radius.circular(21),
                         )),
                     padding: EdgeInsets.all(15.0),
-                    child: Center(
+                     child: SingleChildScrollView(
+                        scrollDirection: Axis.vertical,
                       child: Column(
                         children: [
                           Container(
@@ -318,6 +318,7 @@ class _FranchiseState extends State<Franchise> {
                       ),
                     ),
                   )),
+
                 ]))));
   }
 }

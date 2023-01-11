@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:voltage/SubmitTrails.dart';
-import 'package:voltage/image.dart';
-import 'package:voltage/main.dart';
 
 void main()=>runApp(MaterialApp(
   home: ThankYou(),
@@ -55,7 +53,7 @@ class _ThankYouState extends State<ThankYou> {
                       alignment: Alignment.center,
                       child: Text('Thank you for answering the questions your response have been saved',
                         textAlign: TextAlign.center,
-                        style: TextStyle(color: Colors.black26 ),)
+                        style: TextStyle(color: Colors.black26 ,height: 1.5),)
                   ),
                 Container(
                   width: MediaQuery.of(context).size.width,

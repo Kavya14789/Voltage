@@ -29,7 +29,7 @@ class _TrainingState extends State<Training> {
         child: Scaffold(
             backgroundColor: Colors.transparent,
             body: SingleChildScrollView(
-              scrollDirection: Axis.vertical,
+              physics: NeverScrollableScrollPhysics(),
               child: Column(children: [
                 Container(
                   width: MediaQuery.of(context).size.width,
@@ -81,7 +81,7 @@ class _TrainingState extends State<Training> {
                 ),
                 Container(
                   width: MediaQuery.of(context).size.width,
-                  height: 670,
+                  height: MediaQuery.of(context).size.height,
                   alignment: Alignment.center,
                   decoration: BoxDecoration(
                       color: Colors.white,
@@ -98,7 +98,7 @@ class _TrainingState extends State<Training> {
                               padding: const EdgeInsets.all(8.0),
                               child: Container(
                                 width: 65,
-                                height: 3,
+                                height: 10,
                                 decoration: BoxDecoration(
                                     color: Colors.grey,
                                     borderRadius: BorderRadius.only(
@@ -154,7 +154,7 @@ class _TrainingState extends State<Training> {
                                 child: Text(
                                   '(Finalisation will be based on interview and training performance)',
                                   style: TextStyle(
-                                      color: Colors.teal, fontSize: 15),
+                                      color: Colors.teal, fontSize: 15,height: 1.5),
                                 ),
                               ),
                             ),
@@ -209,10 +209,6 @@ class _TrainingState extends State<Training> {
                                         color: Colors.teal, fontSize: 16),
                                   ),
                                   onPressed: () {
-                                    Navigator.of(context).pushReplacement(
-                                        MaterialPageRoute(
-                                            builder: (BuildContext context) =>
-                                                Franchise()));
                                   },
                                   style: ElevatedButton.styleFrom(
                                       primary: Colors.white,
@@ -239,10 +235,6 @@ class _TrainingState extends State<Training> {
                                       color: Colors.white, fontSize: 16),
                                 ),
                                 onPressed: () {
-                                  Navigator.of(context).pushReplacement(
-                                      MaterialPageRoute(
-                                          builder: (BuildContext context) =>
-                                              Franchise()));
                                 },
                                 style: ElevatedButton.styleFrom(
                                     primary: Colors.teal,

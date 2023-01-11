@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:voltage/Franchise.dart';
 import 'package:voltage/MyProfile.dart';
-import 'package:voltage/ThankYou.dart';
 
 void main() => runApp(MaterialApp(
       home: SubmitTrails(),
@@ -52,10 +51,6 @@ class _SubmitTrailsState extends State<SubmitTrails> {
                               size: 22,
                             ),
                             onPressed: () {
-                              Navigator.of(context).pushReplacement(
-                                  MaterialPageRoute(
-                                      builder: (BuildContext context) =>
-                                          ThankYou()));
                             },
                           ),
                         ),
@@ -98,7 +93,7 @@ class _SubmitTrailsState extends State<SubmitTrails> {
                       scrollDirection: Axis.vertical,
                     child: Container(
                       width: MediaQuery.of(context).size.width,
-                      height: 670,
+                      height: MediaQuery.of(context).size.height,
                       decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.only(
