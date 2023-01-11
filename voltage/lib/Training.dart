@@ -98,7 +98,7 @@ class _TrainingState extends State<Training> {
                               padding: const EdgeInsets.all(8.0),
                               child: Container(
                                 width: 65,
-                                height: 10,
+                                height: 3,
                                 decoration: BoxDecoration(
                                     color: Colors.grey,
                                     borderRadius: BorderRadius.only(
